@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Galleria — Architect's Loft Como</title>
+  <meta name="description" content="Un loft di design nel cuore di Como. Spazi ad altezza doppia, scala a chiocciola e ogni dettaglio pensato per regalarti un soggiorno indimenticabile.">
+  <meta name="theme-color" content="#faf8f4">
+  <link rel="canonical" href="https://www.architectsloft.it/galleria.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Architect's Loft Como">
+  <meta property="og:title" content="Galleria — Architect's Loft Como">
+  <meta property="og:description" content="Un loft di design nel cuore di Como. Spazi ad altezza doppia, scala a chiocciola e ogni dettaglio pensato per regalarti un soggiorno indimenticabile.">
+  <meta property="og:image" content="https://www.architectsloft.it/images/living/living_14.jpg">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="934">
+  <meta property="og:url" content="https://www.architectsloft.it/galleria.html">
+  <meta property="og:locale" content="it_IT">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Galleria — Architect's Loft Como">
+  <meta name="twitter:description" content="Un loft di design nel cuore di Como. Spazi ad altezza doppia, scala a chiocciola e ogni dettaglio pensato per regalarti un soggiorno indimenticabile.">
+  <meta name="twitter:image" content="https://www.architectsloft.it/images/living/living_14.jpg">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero { height:46vh; min-height:300px; position:relative; display:flex; align-items:flex-end; overflow:hidden; }
+    .page-hero-bg { position:absolute; inset:0; background-size:cover; background-position:center; }
+    .page-hero-overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(10,8,6,.78), rgba(10,8,6,.12)); }
+    .page-hero-content { position:relative; z-index:1; padding:clamp(2rem,4vw,3.5rem) clamp(1.5rem,5vw,4rem); text-shadow:0 2px 10px rgba(0,0,0,.5); }
+    .page-hero-content .breadcrumb { font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:rgba(250,248,244,.6); margin-bottom:.75rem; }
+    .page-hero-content h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2.5rem,5vw,4rem); font-weight:300; color:var(--cream); }
+    .page-hero-content p { color:rgba(255,255,255,.85); font-size:.95rem; }
+    .gallery-body { max-width:1300px; margin:0 auto; padding:clamp(3rem,5vw,5rem) clamp(1rem,3vw,2rem); }
+    .tabs { display:flex; flex-wrap:wrap; border-bottom:1px solid var(--stone); margin-bottom:3rem; }
+    .tab-btn { padding:.85rem 2rem; min-height:44px; border:none; background:none; cursor:pointer; font-size:.8rem; letter-spacing:.1em; text-transform:uppercase; color:var(--mid); position:relative; transition:color .2s; }
+    .tab-btn::after { content:''; position:absolute; bottom:-1px; left:0; right:0; height:2px; background:var(--gold); transform:scaleX(0); transition:transform .3s; }
+    .tab-btn.active { color:var(--charcoal); }
+    .tab-btn.active::after { transform:scaleX(1); }
+    .tab-btn:hover { color:var(--charcoal); }
+    .gallery-section { display:none; }
+    .gallery-section.active { display:block; }
+    .gallery-section-header { margin-bottom:2rem; }
+    .gallery-section-header p { color:var(--mid); font-size:.92rem; max-width:560px; }
+    .photo-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+    .photo-grid .span2 { grid-column:span 2; }
+    .photo-item { position:relative; overflow:hidden; cursor:zoom-in; background:var(--stone); border:none; padding:0; }
+    .photo-item img { width:100%; height:100%; object-fit:cover; transition:transform .7s ease, filter .4s; display:block; }
+    .photo-item:hover img { transform:scale(1.06); filter:brightness(.92); }
+    .photo-item .overlay { position:absolute; inset:0; background:rgba(28,26,24,0); transition:background .3s; display:flex; align-items:center; justify-content:center; pointer-events:none; }
+    .photo-item:hover .overlay { background:rgba(28,26,24,.2); }
+    .overlay-icon { opacity:0; transform:scale(.7); transition:opacity .3s, transform .3s; color:#fff; font-size:1.5rem; }
+    .photo-item:hover .overlay-icon { opacity:1; transform:scale(1); }
+    .ar-land { aspect-ratio:4/3; } .ar-port { aspect-ratio:3/4; } .ar-sq { aspect-ratio:1/1; } .ar-wide { aspect-ratio:16/9; }
+    .lightbox { display:none; position:fixed; inset:0; z-index:999; background:rgba(20,18,16,.96); align-items:center; justify-content:center; }
+    .lightbox.open { display:flex; }
+    .lb-inner { position:relative; max-width:92vw; max-height:88vh; }
+    .lb-inner img { max-width:92vw; max-height:80vh; object-fit:contain; transition:opacity .15s; }
+    .lb-close { position:absolute; top:-3rem; right:0; min-width:44px; min-height:44px; background:none; border:none; color:#fff; font-size:1.4rem; cursor:pointer; }
+    .lb-nav { position:absolute; top:50%; transform:translateY(-50%); min-width:44px; min-height:60px; background:rgba(250,248,244,.08); border:none; color:#fff; font-size:1.8rem; cursor:pointer; transition:background .2s; }
+    .lb-nav:hover { background:rgba(250,248,244,.2); }
+    .lb-prev { left:-3.5rem; } .lb-next { right:-3.5rem; }
+    .lb-caption { position:absolute; bottom:-2.5rem; left:0; right:0; text-align:center; color:rgba(250,248,244,.55); font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; }
+    @media (max-width:900px) {
+      .photo-grid { grid-template-columns:repeat(2,1fr); }
+      .photo-grid .span2 { grid-column:span 2; }
+      .lb-prev { left:.25rem; } .lb-next { right:.25rem; }
+      .lb-close { top:auto; bottom:-3.5rem; right:50%; transform:translateX(50%); }
+    }
+    @media (max-width:500px) {
+      .tabs { gap:0; }
+      .tab-btn { flex:1 1 50%; padding:.75rem .5rem; font-size:.72rem; }
+      .photo-grid { gap:6px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-logo">
+    <a href="index.html" aria-label="Architect's Loft — Home">
+      <img src="images/logo.png" alt="Architect's Loft Como" width="535" height="561">
+    </a>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+    <li><a href="info.html" data-i18n="nav.info">Info</a></li>
+    <li><a href="galleria.html" class="active" data-i18n="nav.gallery">Galleria</a></li>
+    <li><a href="prenota.html" class="nav-cta" data-i18n="nav.book">Prenota ora</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-switcher" role="group" aria-label="Lingua">
+      <button class="lang-btn" data-lang="it">IT</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+<div class="page">
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('images/living/living_1.jpg')"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="breadcrumb"><a href="index.html" style="color:inherit" data-i18n="nav.home">Home</a> / <span data-i18n="gal.pg.title">Galleria fotografica</span></p>
+      <h1 data-i18n="gal.pg.title">Galleria fotografica</h1>
+    </div>
+  </div>
+
+  <div class="gallery-body">
+    <div class="tabs" role="tablist">
+      <button class="tab-btn active" data-tab="living" role="tab" aria-selected="true" data-i18n="gal.tab.living">Living</button>
+      <button class="tab-btn" data-tab="cucina" role="tab" aria-selected="false" data-i18n="gal.tab.cucina">Cucina</button>
+      <button class="tab-btn" data-tab="camera" role="tab" aria-selected="false" data-i18n="gal.tab.camera">Camera</button>
+      <button class="tab-btn" data-tab="bagno" role="tab" aria-selected="false" data-i18n="gal.tab.bagno">Bagno</button>
+    </div>
+
+    <section class="gallery-section active" id="living">
+      <div class="gallery-section-header">
+        <span class="section-label" data-i18n="gal.liv.label">Il cuore del Loft</span>
+        <h2 class="section-title" data-i18n="gal.liv.title">Living</h2>
+        <div class="section-divider"></div>
+        <p data-i18n="gal.liv.text">Il soggiorno a doppia altezza con scala a chiocciola è il simbolo dell'Architect's Loft. Ampie finestre, divano angolare e zona pranzo per momenti di relax o convivialità.</p>
+      </div>
+      <div class="photo-grid">
+        <button class="photo-item span2 ar-land" data-src="images/living/living_1.jpg" data-zone="Living" aria-label="Living — foto 1"><img src="images/living/living_1.jpg" alt="Living — foto 1" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-port" data-src="images/living/living_2.jpg" data-zone="Living" aria-label="Living — foto 2"><img src="images/living/living_2.jpg" alt="Living — foto 2" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-port" data-src="images/living/living_3.jpg" data-zone="Living" aria-label="Living — foto 3"><img src="images/living/living_3.jpg" alt="Living — foto 3" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-sq" data-src="images/living/living_4.jpg" data-zone="Living" aria-label="Living — foto 4"><img src="images/living/living_4.jpg" alt="Living — foto 4" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-sq" data-src="images/living/living_5.jpg" data-zone="Living" aria-label="Living — foto 5"><img src="images/living/living_5.jpg" alt="Living — foto 5" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item span2 ar-land" data-src="images/living/living_6.jpg" data-zone="Living" aria-label="Living — foto 6"><img src="images/living/living_6.jpg" alt="Living — foto 6" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-land" data-src="images/living/living_7.jpg" data-zone="Living" aria-label="Living — foto 7"><img src="images/living/living_7.jpg" alt="Living — foto 7" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-land" data-src="images/living/living_8.jpg" data-zone="Living" aria-label="Living — foto 8"><img src="images/living/living_8.jpg" alt="Living — foto 8" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-land" data-src="images/living/living_9.jpg" data-zone="Living" aria-label="Living — foto 9"><img src="images/living/living_9.jpg" alt="Living — foto 9" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-land" data-src="images/living/living_10.jpg" data-zone="Living" aria-label="Living — foto 10"><img src="images/living/living_10.jpg" alt="Living — foto 10" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-land" data-src="images/living/living_11.jpg" data-zone="Living" aria-label="Living — foto 11"><img src="images/living/living_11.jpg" alt="Living — foto 11" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-land" data-src="images/living/living_12.jpg" data-zone="Living" aria-label="Living — foto 12"><img src="images/living/living_12.jpg" alt="Living — foto 12" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item span2 ar-wide" data-src="images/living/living_13.jpg" data-zone="Living" aria-label="Living — foto 13"><img src="images/living/living_13.jpg" alt="Living — foto 13" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-land" data-src="images/living/living_14.jpg" data-zone="Living" aria-label="Living — foto 14"><img src="images/living/living_14.jpg" alt="Living — foto 14" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-land" data-src="images/living/living_15.jpg" data-zone="Living" aria-label="Living — foto 15"><img src="images/living/living_15.jpg" alt="Living — foto 15" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="cucina">
+      <div class="gallery-section-header">
+        <span class="section-label" data-i18n="gal.cuc.label">Il piacere del cucinare</span>
+        <h2 class="section-title" data-i18n="gal.cuc.title">Cucina</h2>
+        <div class="section-divider"></div>
+        <p data-i18n="gal.cuc.text">Cucina completamente attrezzata con tutto il necessario per preparare colazioni, aperitivi o cene romantiche.</p>
+      </div>
+      <div class="photo-grid">
+        <button class="photo-item span2 ar-land" data-src="images/cucina/cucina_1.jpg" data-zone="Cucina" aria-label="Cucina — foto 1"><img src="images/cucina/cucina_1.jpg" alt="Cucina — foto 1" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-port" data-src="images/cucina/cucina_2.jpg" data-zone="Cucina" aria-label="Cucina — foto 2"><img src="images/cucina/cucina_2.jpg" alt="Cucina — foto 2" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-port" data-src="images/cucina/cucina_3.jpg" data-zone="Cucina" aria-label="Cucina — foto 3"><img src="images/cucina/cucina_3.jpg" alt="Cucina — foto 3" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-land" data-src="images/cucina/cucina_4.jpg" data-zone="Cucina" aria-label="Cucina — foto 4"><img src="images/cucina/cucina_4.jpg" alt="Cucina — foto 4" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-land" data-src="images/cucina/cucina_5.jpg" data-zone="Cucina" aria-label="Cucina — foto 5"><img src="images/cucina/cucina_5.jpg" alt="Cucina — foto 5" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="camera">
+      <div class="gallery-section-header">
+        <span class="section-label" data-i18n="gal.cam.label">Il riposo perfetto</span>
+        <h2 class="section-title" data-i18n="gal.cam.title">Camera</h2>
+        <div class="section-divider"></div>
+        <p data-i18n="gal.cam.text">La camera da letto è ricavata al piano superiore del loft, con accesso dalla scala a chiocciola. Un letto matrimoniale comodo, cuscini soffici e luce naturale per risvegli indimenticabili.</p>
+      </div>
+      <div class="photo-grid">
+        <button class="photo-item span2 ar-land" data-src="images/camera/camera_1.jpg" data-zone="Camera" aria-label="Camera — foto 1"><img src="images/camera/camera_1.jpg" alt="Camera — foto 1" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-port" data-src="images/camera/camera_2.jpg" data-zone="Camera" aria-label="Camera — foto 2"><img src="images/camera/camera_2.jpg" alt="Camera — foto 2" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-port" data-src="images/camera/camera_3.jpg" data-zone="Camera" aria-label="Camera — foto 3"><img src="images/camera/camera_3.jpg" alt="Camera — foto 3" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-land" data-src="images/camera/camera_4.jpg" data-zone="Camera" aria-label="Camera — foto 4"><img src="images/camera/camera_4.jpg" alt="Camera — foto 4" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-land" data-src="images/camera/camera_5.jpg" data-zone="Camera" aria-label="Camera — foto 5"><img src="images/camera/camera_5.jpg" alt="Camera — foto 5" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item span2 ar-wide" data-src="images/camera/camera_6.jpg" data-zone="Camera" aria-label="Camera — foto 6"><img src="images/camera/camera_6.jpg" alt="Camera — foto 6" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="bagno">
+      <div class="gallery-section-header">
+        <span class="section-label" data-i18n="gal.bag.label">Il tuo angolo di benessere</span>
+        <h2 class="section-title" data-i18n="gal.bag.title">Bagno</h2>
+        <div class="section-divider"></div>
+        <p data-i18n="gal.bag.text">Il bagno privato è dotato di doccia/vasca, asciugacapelli, biancheria da bagno di qualità e prodotti di cortesia.</p>
+      </div>
+      <div class="photo-grid">
+        <button class="photo-item ar-port" data-src="images/bagno/bagno_1.jpg" data-zone="Bagno" aria-label="Bagno — foto 1"><img src="images/bagno/bagno_1.jpg" alt="Bagno — foto 1" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-port" data-src="images/bagno/bagno_2.jpg" data-zone="Bagno" aria-label="Bagno — foto 2"><img src="images/bagno/bagno_2.jpg" alt="Bagno — foto 2" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item span2 ar-land" data-src="images/bagno/bagno_3.jpg" data-zone="Bagno" aria-label="Bagno — foto 3"><img src="images/bagno/bagno_3.jpg" alt="Bagno — foto 3" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-land" data-src="images/bagno/bagno_4.jpg" data-zone="Bagno" aria-label="Bagno — foto 4"><img src="images/bagno/bagno_4.jpg" alt="Bagno — foto 4" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item ar-land" data-src="images/bagno/bagno_5.jpg" data-zone="Bagno" aria-label="Bagno — foto 5"><img src="images/bagno/bagno_5.jpg" alt="Bagno — foto 5" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+        <button class="photo-item span2 ar-land" data-src="images/bagno/bagno_6.jpg" data-zone="Bagno" aria-label="Bagno — foto 6"><img src="images/bagno/bagno_6.jpg" alt="Bagno — foto 6" loading="lazy"><span class="overlay" aria-hidden="true"><span class="overlay-icon">⊕</span></span></button>
+      </div>
+    </section>
+
+    <div style="text-align:center;padding:4rem 0 1rem;" class="fade-in">
+      <a href="prenota.html" class="btn btn-dark" data-i18n="gal.cta">Prenota il tuo soggiorno →</a>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ingrandita">
+  <div class="lb-inner">
+    <button class="lb-close" id="lbClose" aria-label="Chiudi">✕</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Foto precedente">‹</button>
+    <img id="lbImg" src="" alt="">
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Foto successiva">›</button>
+    <p class="lb-caption" id="lbCaption"></p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="footer-logo"><img src="images/logo.png" alt="" width="535" height="561"><span>Architect's Loft</span></div>
+      <p data-i18n="footer.tagline">Un loft di design nel cuore di Como. Spazi architettonici, atmosfera unica.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer.nav">Navigazione</h4>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="info.html" data-i18n="nav.info">Info</a>
+      <a href="galleria.html" data-i18n="nav.gallery">Galleria</a>
+      <a href="prenota.html" data-i18n="nav.book">Prenota ora</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer.bookon">Prenota su</h4>
+      <a href="https://rentallcomo.italianway.house/apartments/14171-appartamento-como" target="_blank" rel="noopener">RentAllComo</a>
+      <a href="https://www.airbnb.it/rooms/1485391339417337877" target="_blank" rel="noopener">Airbnb</a>
+      <a href="https://www.booking.com/hotel/it/architects-loft.it.html" target="_blank" rel="noopener">Booking.com</a>
+      <br>
+      <h4 data-i18n="footer.where">Dove siamo</h4>
+      <p>Viale Innocenzo XI, 70<br>22100 Como (CO), Italia</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-i18n="footer.rights">© 2025 Architect's Loft Como. Tutti i diritti riservati.</span>
+    <span>Viale Innocenzo XI, 70 — Como</span>
+  </div>
+</footer>
+
+<script src="lang.js"></script>
+<script src="nav.js"></script>
+<script>
+(function(){
+  'use strict';
+  /* tabs */
+  var tabBtns = document.querySelectorAll('.tab-btn');
+  var sections = document.querySelectorAll('.gallery-section');
+  function activate(btn) {
+    for (var i=0;i<tabBtns.length;i++){ tabBtns[i].classList.remove('active'); tabBtns[i].setAttribute('aria-selected','false'); }
+    for (var j=0;j<sections.length;j++){ sections[j].classList.remove('active'); }
+    btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+    document.getElementById(btn.getAttribute('data-tab')).classList.add('active');
+  }
+  for (var i=0;i<tabBtns.length;i++){
+    (function(btn){
+      btn.addEventListener('click', function(){
+        activate(btn);
+        var tabs = document.querySelector('.tabs');
+        window.scrollTo({ top: tabs.offsetTop - 90, behavior: 'smooth' });
+      });
+    })(tabBtns[i]);
+  }
+  var hash = location.hash.replace('#','');
+  if (hash) { var b = document.querySelector('[data-tab="'+hash+'"]'); if (b) activate(b); }
+
+  /* lightbox */
+  var allItems = [], idx = 0;
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lbImg');
+  var lbCap = document.getElementById('lbCaption');
+  var lastFocus = null;
+  function show() {
+    lbImg.src = allItems[idx].src;
+    lbImg.alt = allItems[idx].zone;
+    lbCap.textContent = allItems[idx].zone + ' — ' + (idx+1) + ' / ' + allItems.length;
+  }
+  function openLb(items, i, origin) {
+    allItems = items; idx = i; lastFocus = origin;
+    show();
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('lbClose').focus();
+  }
+  function closeLb() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+  function nav(dir) {
+    idx = (idx + dir + allItems.length) % allItems.length;
+    lbImg.style.opacity = '0';
+    setTimeout(function(){ show(); lbImg.style.opacity = '1'; }, 150);
+  }
+  var photoItems = document.querySelectorAll('.photo-item');
+  for (var k=0;k<photoItems.length;k++){
+    (function(item){
+      item.addEventListener('click', function(){
+        var section = item.closest('.gallery-section');
+        var nodes = section.querySelectorAll('.photo-item');
+        var items = [], pos = 0;
+        for (var m=0;m<nodes.length;m++){
+          items.push({ src: nodes[m].getAttribute('data-src'), zone: nodes[m].getAttribute('data-zone') });
+          if (nodes[m] === item) pos = m;
+        }
+        openLb(items, pos, item);
+      });
+    })(photoItems[k]);
+  }
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  document.getElementById('lbPrev').addEventListener('click', function(){ nav(-1); });
+  document.getElementById('lbNext').addEventListener('click', function(){ nav(1); });
+  lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'ArrowLeft') nav(-1);
+    if (e.key === 'ArrowRight') nav(1);
+    if (e.key === 'Escape') closeLb();
+  });
+  /* swipe on touch */
+  var touchX = null;
+  lb.addEventListener('touchstart', function(e){ touchX = e.changedTouches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', function(e){
+    if (touchX === null) return;
+    var dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 50) nav(dx < 0 ? 1 : -1);
+    touchX = null;
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>
