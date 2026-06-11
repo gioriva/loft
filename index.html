@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Architect's Loft Como — Design B&B nel cuore di Como</title>
+  <meta name="description" content="Un loft di design nel cuore di Como. Spazi ad altezza doppia, scala a chiocciola e ogni dettaglio pensato per regalarti un soggiorno indimenticabile.">
+  <meta name="theme-color" content="#faf8f4">
+  <link rel="canonical" href="https://www.architectsloft.it/index.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Social / Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Architect's Loft Como">
+  <meta property="og:title" content="Architect's Loft Como — Design B&B nel cuore di Como">
+  <meta property="og:description" content="Un loft di design nel cuore di Como. Spazi ad altezza doppia, scala a chiocciola e ogni dettaglio pensato per regalarti un soggiorno indimenticabile.">
+  <meta property="og:image" content="https://www.architectsloft.it/images/living/living_14.jpg">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="934">
+  <meta property="og:url" content="https://www.architectsloft.it/index.html">
+  <meta property="og:locale" content="it_IT">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Architect's Loft Como — Design B&B nel cuore di Como">
+  <meta name="twitter:description" content="Un loft di design nel cuore di Como. Spazi ad altezza doppia, scala a chiocciola e ogni dettaglio pensato per regalarti un soggiorno indimenticabile.">
+  <meta name="twitter:image" content="https://www.architectsloft.it/images/living/living_14.jpg">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero { position:relative; min-height:100svh; display:flex; align-items:flex-end; overflow:hidden; }
+    .hero-bg { position:absolute; inset:0; background-image:url('images/living/living_4.jpg'); background-size:cover; background-position:center 30%; transform:scale(1.06); animation:heroZoom 14s ease-out forwards; }
+    @keyframes heroZoom { to { transform:scale(1); } }
+    .hero-overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(10,8,6,.88) 0%, rgba(10,8,6,.45) 55%, transparent 100%); }
+    .hero-content { position:relative; z-index:2; padding:clamp(2rem,6vw,5rem) clamp(1.5rem,6vw,5rem); max-width:700px; animation:heroFade 1.4s ease both; text-shadow:0 2px 12px rgba(0,0,0,.6); }
+    @keyframes heroFade { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+    .hero-tag { display:inline-block; font-size:.68rem; letter-spacing:.25em; text-transform:uppercase; color:var(--gold-hi); margin-bottom:1.2rem; border:1.5px solid var(--gold-hi); padding:.3rem .9rem; text-shadow:0 1px 6px rgba(0,0,0,.7); background:rgba(0,0,0,.25); }
+    .hero-title { font-family:'Cormorant Garamond',serif; font-size:clamp(3rem,7vw,5.5rem); font-weight:300; line-height:1.05; color:var(--cream); margin-bottom:1.25rem; }
+    .hero-title em { font-style:italic; color:var(--gold-hi); }
+    .hero-sub { font-size:clamp(.9rem,1.5vw,1.05rem); font-weight:300; color:rgba(255,255,255,.95); margin-bottom:2.5rem; max-width:480px; line-height:1.7; text-shadow:0 1px 8px rgba(0,0,0,.5); }
+    .hero-ctas { display:flex; gap:1rem; flex-wrap:wrap; }
+    .hero-scroll { position:absolute; bottom:2.5rem; right:clamp(1.5rem,5vw,4rem); z-index:2; display:flex; align-items:center; gap:.6rem; font-size:.65rem; letter-spacing:.18em; text-transform:uppercase; color:rgba(250,248,244,.55); writing-mode:vertical-rl; animation:fadeDelay 2s ease both; }
+    @keyframes fadeDelay { 0%,60% { opacity:0; } 100% { opacity:1; } }
+    .hero-scroll::after { content:''; display:block; width:1px; height:60px; background:linear-gradient(to bottom, rgba(250,248,244,.4), transparent); animation:scrollLine 2.5s ease-in-out infinite; }
+    @keyframes scrollLine { 0%,100% { transform:scaleY(1); opacity:.5; } 50% { transform:scaleY(.5); opacity:.2; } }
+    .strip { background:var(--charcoal); color:var(--cream); display:flex; justify-content:center; flex-wrap:wrap; }
+    .strip-item { flex:1 1 200px; text-align:center; padding:2rem 1.5rem; border-right:1px solid rgba(255,255,255,.08); transition:background .3s; }
+    .strip-item:last-child { border-right:none; }
+    .strip-item:hover { background:rgba(201,169,110,.12); }
+    .strip-num { font-family:'Cormorant Garamond',serif; font-size:2.4rem; font-weight:300; color:var(--gold); display:block; line-height:1; }
+    .strip-label { font-size:.72rem; letter-spacing:.15em; text-transform:uppercase; color:var(--stone); margin-top:.4rem; }
+    .intro { padding:clamp(4rem,8vw,7rem) clamp(1.5rem,5vw,4rem); }
+    .intro-inner { max-width:1200px; margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:clamp(3rem,6vw,6rem); align-items:center; }
+    .intro-text .lead { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(1.2rem,2vw,1.5rem); font-weight:300; color:var(--mid); margin-bottom:1.5rem; line-height:1.6; }
+    .intro-text p { font-size:.95rem; color:var(--mid); margin-bottom:1rem; line-height:1.75; }
+    .intro-img-wrap { position:relative; }
+    .intro-img-main { width:100%; aspect-ratio:4/5; object-fit:cover; }
+    .intro-img-float { position:absolute; bottom:-2.5rem; right:-2rem; width:55%; aspect-ratio:4/3; object-fit:cover; border:6px solid var(--cream); box-shadow:0 8px 40px var(--shadow); }
+    .spaces { padding:clamp(3rem,6vw,6rem) clamp(1.5rem,5vw,4rem); background:var(--warm); }
+    .spaces-header { max-width:1200px; margin:0 auto 3rem; }
+    .spaces-grid { max-width:1200px; margin:auto; display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; }
+    .space-card { position:relative; overflow:hidden; }
+    .space-card img { width:100%; aspect-ratio:3/4; object-fit:cover; transition:transform .8s ease; }
+    .space-card:hover img { transform:scale(1.06); }
+    .space-card-label { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top, rgba(28,26,24,.75), transparent); padding:3rem 1.25rem 1.25rem; font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:400; color:var(--cream); letter-spacing:.05em; }
+    .why { padding:clamp(4rem,8vw,7rem) clamp(1.5rem,5vw,4rem); }
+    .why-inner { max-width:1200px; margin:auto; }
+    .why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:3rem; margin-top:3rem; }
+    .why-icon { width:48px; height:48px; margin-bottom:1rem; border:1px solid var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.3rem; }
+    .why-item h3 { font-family:'Cormorant Garamond',serif; font-size:1.25rem; font-weight:500; margin-bottom:.5rem; }
+    .why-item p { font-size:.88rem; color:var(--mid); line-height:1.75; }
+    .location { padding:clamp(3rem,6vw,6rem) clamp(1.5rem,5vw,4rem); background:var(--warm); }
+    .location-inner { max-width:1200px; margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+    .location-map { width:100%; aspect-ratio:4/3; border:0; filter:grayscale(.3) contrast(1.05); }
+    @media (max-width:900px) {
+      .intro-inner { grid-template-columns:1fr; }
+      .intro-img-float { display:none; }
+      .spaces-grid { grid-template-columns:repeat(2,1fr); }
+      .why-grid { grid-template-columns:1fr 1fr; }
+      .location-inner { grid-template-columns:1fr; gap:2.5rem; }
+    }
+    @media (max-width:540px) {
+      .spaces-grid { grid-template-columns:1fr 1fr; gap:.75rem; }
+      .why-grid { grid-template-columns:1fr; gap:2rem; }
+      .hero-ctas .btn { width:100%; }
+      .strip-item { flex:1 1 50%; border-bottom:1px solid rgba(255,255,255,.08); }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-logo">
+    <a href="index.html" aria-label="Architect's Loft — Home">
+      <img src="images/logo.png" alt="Architect's Loft Como" width="535" height="561">
+    </a>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+    <li><a href="info.html" data-i18n="nav.info">Info</a></li>
+    <li><a href="galleria.html" data-i18n="nav.gallery">Galleria</a></li>
+    <li><a href="prenota.html" class="nav-cta" data-i18n="nav.book">Prenota ora</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-switcher" role="group" aria-label="Lingua">
+      <button class="lang-btn" data-lang="it">IT</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="Il living a doppia altezza dell'Architect's Loft"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-tag" data-i18n="home.hero.tag">LAGO DI COMO</span>
+    <h1 class="hero-title">Architect's<br><em>Loft</em></h1>
+    <p class="hero-sub" data-i18n="home.hero.sub">Un loft di design nel cuore di Como. Spazi ad altezza doppia, scala a chiocciola e ogni dettaglio pensato per regalarti un soggiorno indimenticabile.</p>
+    <div class="hero-ctas">
+      <a href="prenota.html" class="btn btn-gold" data-i18n="home.hero.cta1">Prenota ora</a>
+      <a href="galleria.html" class="btn" style="color:var(--cream);border-color:rgba(250,248,244,.6);" data-i18n="home.hero.cta2">Scopri gli spazi</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">Scorri</div>
+</header>
+
+<div class="strip">
+  <div class="strip-item fade-in"><span class="strip-num">70 m²</span><span class="strip-label" data-i18n="home.strip.1l">Su due livelli</span></div>
+  <div class="strip-item fade-in"><span class="strip-num">2+2</span><span class="strip-label" data-i18n="home.strip.2l">Ospiti</span></div>
+  <div class="strip-item fade-in"><span class="strip-num">5 min</span><span class="strip-label" data-i18n="home.strip.3l">Dal lago</span></div>
+  <div class="strip-item fade-in"><span class="strip-num">🅿</span><span class="strip-label" data-i18n="home.strip.4l">Posto auto gratuito</span></div>
+</div>
+
+<section class="intro">
+  <div class="intro-inner">
+    <div class="intro-text fade-in">
+      <span class="section-label" data-i18n="home.intro.label">Chi siamo</span>
+      <h2 class="section-title" data-i18n="home.intro.title" data-i18n-html>Dove l'architettura<br>incontra l'ospitalità</h2>
+      <div class="section-divider"></div>
+      <p class="lead" data-i18n="home.intro.quote">“Un rifugio pensato da architetti per chi ama la bellezza dei dettagli.”</p>
+      <p data-i18n="home.intro.p1">Architect's Loft è un appartamento su due livelli immerso nel tessuto storico di Como, a pochi passi dal centro e dal lungolago. L'abitazione è stata progettata con cura per unire comfort contemporaneo e fascino industriale: soffitti alti, scala a chiocciola in acciaio, grandi finestre che inondano di luce ogni angolo.</p>
+      <p data-i18n="home.intro.p2">Appena completamente ristrutturato, ogni elemento — dal parquet alle lampade — è stato scelto con attenzione per creare un'atmosfera unica, romantica e sofisticata. Il tuo soggiorno a Como non sarà semplicemente una notte in più.</p>
+      <br>
+      <a href="info.html" class="btn btn-dark" data-i18n="home.intro.btn">Tutte le informazioni</a>
+    </div>
+    <div class="intro-img-wrap fade-in">
+      <img src="images/living/living_2.jpg" alt="Il living dell'Architect's Loft" class="intro-img-main" loading="lazy">
+      <img src="images/camera/camera_1.jpg" alt="La camera da letto" class="intro-img-float" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="spaces">
+  <div class="spaces-header fade-in">
+    <span class="section-label" data-i18n="home.spaces.label">Gli spazi</span>
+    <h2 class="section-title" data-i18n="home.spaces.title" data-i18n-html>Quattro ambienti,<br>un'unica anima</h2>
+  </div>
+  <div class="spaces-grid">
+    <a href="galleria.html#living" class="space-card fade-in"><img src="images/living/living_7.jpg" alt="Living" loading="lazy"><span class="space-card-label" data-i18n="home.spaces.living">Living</span></a>
+    <a href="galleria.html#cucina" class="space-card fade-in"><img src="images/cucina/cucina_1.jpg" alt="Cucina" loading="lazy"><span class="space-card-label" data-i18n="home.spaces.cucina">Cucina</span></a>
+    <a href="galleria.html#camera" class="space-card fade-in"><img src="images/camera/camera_3.jpg" alt="Camera" loading="lazy"><span class="space-card-label" data-i18n="home.spaces.camera">Camera</span></a>
+    <a href="galleria.html#bagno" class="space-card fade-in"><img src="images/bagno/bagno_3.jpg" alt="Bagno" loading="lazy"><span class="space-card-label" data-i18n="home.spaces.bagno">Bagno</span></a>
+  </div>
+</section>
+
+<section class="why">
+  <div class="why-inner">
+    <div class="fade-in">
+      <span class="section-label" data-i18n="home.why.label">Perché sceglierci</span>
+      <h2 class="section-title" data-i18n="home.why.title" data-i18n-html>Tutto quello che<br>cerchi, e qualcosa in più</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item fade-in"><div class="why-icon" aria-hidden="true">📍</div><h3 data-i18n="home.why.1t">Posizione privilegiata</h3><p data-i18n="home.why.1p">In pieno centro storico, a 5 minuti a piedi dal lago e dalla Cattedrale di Como. Tutto a portata di mano.</p></div>
+      <div class="why-item fade-in"><div class="why-icon" aria-hidden="true">🅿</div><h3 data-i18n="home.why.2t">Posto auto dedicato</h3><p data-i18n="home.why.2p">Un posto auto privato gratuito incluso nel soggiorno — un lusso raro nel centro di Como.</p></div>
+      <div class="why-item fade-in"><div class="why-icon" aria-hidden="true">🏛</div><h3 data-i18n="home.why.3t">Design architettonico</h3><p data-i18n="home.why.3p">Appena ristrutturato, loft su due livelli con scala a chiocciola, soffitti alti e arredi curati.</p></div>
+      <div class="why-item fade-in"><div class="why-icon" aria-hidden="true">🛁</div><h3 data-i18n="home.why.4t">Comfort completo</h3><p data-i18n="home.why.4p">Cucina attrezzata, Wi-Fi ad alta velocità, TV, biancheria di qualità.</p></div>
+      <div class="why-item fade-in"><div class="why-icon" aria-hidden="true">☀️</div><h3 data-i18n="home.why.5t">Luce naturale</h3><p data-i18n="home.why.5p">Grandi finestre esposte a sud che inondano di luce il living e la camera.</p></div>
+      <div class="why-item fade-in"><div class="why-icon" aria-hidden="true">💬</div><h3 data-i18n="home.why.6t">Ospitalità italiana</h3><p data-i18n="home.why.6p">Check-in flessibile, risposta rapida e attenzione vera per ogni esigenza.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="location">
+  <div class="location-inner">
+    <div class="fade-in">
+      <span class="section-label" data-i18n="home.loc.label">Dove siamo</span>
+      <h2 class="section-title" data-i18n="home.loc.title">Nel cuore pulsante di Como</h2>
+      <div class="section-divider"></div>
+      <p style="color:var(--mid);font-size:.95rem;line-height:1.75;margin-bottom:1.5rem;" data-i18n="home.loc.text" data-i18n-html>Viale Innocenzo XI, 70 — Como<br>A due passi dalla stazione San Giovanni, dal Duomo e dal lungolago.</p>
+      <ul style="list-style:none;font-size:.88rem;color:var(--mid);line-height:2.2;">
+        <li>🚶 5 min — <span data-i18n="info.d1" style="display:inline">Lago di Como</span></li>
+        <li>🚶 6 min — <span data-i18n="info.d2" style="display:inline">Duomo di Como</span></li>
+        <li>🚉 8 min — <span data-i18n="info.d3" style="display:inline">Stazione Como San Giovanni</span></li>
+        <li>🚗 3 min — <span data-i18n="info.d5" style="display:inline">Autostrada A9</span></li>
+      </ul>
+      <br>
+      <a href="info.html" class="btn btn-dark" data-i18n="home.loc.btn">Tutte le info pratiche</a>
+    </div>
+    <div class="fade-in">
+<iframe class="location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2778.5!2d9.08!3d45.81!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47869f3ae6e591c1%3A0x0!2sViale+Innocenzo+XI%2C+70%2C+22100+Como+CO!5e0!3m2!1sit!2sit!4v1" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Mappa Architect's Loft"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="footer-logo"><img src="images/logo.png" alt="" width="535" height="561"><span>Architect's Loft</span></div>
+      <p data-i18n="footer.tagline">Un loft di design nel cuore di Como. Spazi architettonici, atmosfera unica.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer.nav">Navigazione</h4>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="info.html" data-i18n="nav.info">Info</a>
+      <a href="galleria.html" data-i18n="nav.gallery">Galleria</a>
+      <a href="prenota.html" data-i18n="nav.book">Prenota ora</a>
+      <a href="privacy.html" data-i18n="footer.privacy">Privacy e cookie</a>
+      <a href="#" data-cookie-manage data-i18n="footer.managecookies">Gestisci cookie</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer.bookon">Prenota su</h4>
+      <a href="https://rentallcomo.italianway.house/apartments/14171-appartamento-como" target="_blank" rel="noopener">RentAllComo</a>
+      <a href="https://www.airbnb.it/rooms/1485391339417337877" target="_blank" rel="noopener">Airbnb</a>
+      <a href="https://www.booking.com/hotel/it/architects-loft.it.html" target="_blank" rel="noopener">Booking.com</a>
+      <br>
+      <h4 data-i18n="footer.where">Dove siamo</h4>
+      <p>Viale Innocenzo XI, 70<br>22100 Como (CO), Italia</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-i18n="footer.rights">© 2025 Architect's Loft Como. Tutti i diritti riservati.</span>
+    <span>Viale Innocenzo XI, 70 — Como</span>
+  </div>
+</footer>
+
+<script src="lang.js"></script>
+<script src="nav.js"></script>
+<script src="cookies.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BedAndBreakfast",
+  "name": "Architect's Loft Como",
+  "description": "Un loft di design nel cuore di Como. Spazi ad altezza doppia, scala a chiocciola e ogni dettaglio pensato per regalarti un soggiorno indimenticabile.",
+  "url": "https://www.architectsloft.it",
+  "image": "https://www.architectsloft.it/images/living/living_14.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Viale Innocenzo XI, 70",
+    "addressLocality": "Como",
+    "postalCode": "22100",
+    "addressRegion": "CO",
+    "addressCountry": "IT"
+  },
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Posto auto privato gratuito", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Aria condizionata", "value": true}
+  ],
+  "checkinTime": "15:00",
+  "checkoutTime": "11:00"
+}
+</script>
+</body>
+</html>
