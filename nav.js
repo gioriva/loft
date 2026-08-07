@@ -1,4 +1,4 @@
-/* ARCHITECT'S LOFT — shared UI script (nav drawer, scroll, fade-in) */
+/* ARCHITECT'S LOFT, shared UI script (nav drawer, scroll, fade-in) */
 (function () {
   'use strict';
 
@@ -14,12 +14,12 @@
     }, { passive: true });
   }
 
-  /* mobile drawer — slides in from the right */
+  /* mobile drawer, slides in from the right */
   function openDrawer() {
     links.classList.add('open');
     backdrop.classList.add('show');
     toggle.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';   /* body only — never html (iOS Safari) */
+    document.body.style.overflow = 'hidden';   /* body only, never html (iOS Safari) */
   }
   function closeDrawer() {
     links.classList.remove('open');

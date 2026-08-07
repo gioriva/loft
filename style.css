@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════
-   ARCHITECT'S LOFT COMO — shared stylesheet (rev. 2)
+   ARCHITECT'S LOFT COMO, foglio di stile condiviso (rev. 2)
    ═══════════════════════════════════════════════════ */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
@@ -188,7 +188,7 @@ footer {
 }
 
 /* ═══════════════════════════════════════════════
-   MOBILE — drawer menu sliding from the RIGHT
+   MOBILE, menu a scomparsa da destra
    ═══════════════════════════════════════════════ */
 @media (max-width: 768px) {
   .nav { padding: 0 1.25rem; }

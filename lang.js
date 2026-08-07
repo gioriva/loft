@@ -1,6 +1,6 @@
-/* ARCHITECT'S LOFT — Language Engine v5
+/* ARCHITECT'S LOFT, Language Engine v5
    Default language is ALWAYS Italian on page load.
-   Generated programmatically — do not hand-edit translation strings. */
+   Generated programmatically, do not hand-edit translation strings. */
 
 var SUPPORTED = ['it','en','fr','de'];
 function readLang() { return 'it'; }
@@ -133,10 +133,10 @@ var T = {
   de: "Architect's Loft ist eine zweigeschossige Wohnung im historischen Kern von Como, nur wenige Schritte vom Zentrum und dem Seeufer entfernt. Der Raum verbindet modernen Komfort mit industriellem Charme: hohe Decken, eine Wendeltreppe aus Stahl, große Fenster."
   },
   "home.intro.p2": {
-  it: "Appena completamente ristrutturato, ogni elemento — dal parquet alle lampade — è stato scelto con attenzione per creare un'atmosfera unica, romantica e sofisticata. Il tuo soggiorno a Como non sarà semplicemente una notte in più.",
-  en: "Freshly and fully renovated, every element — from the parquet to the light fittings — has been chosen with care to create a unique, romantic and sophisticated atmosphere. Your stay in Como will be far more than just another night away.",
-  fr: "Entièrement rénové, chaque élément — du parquet aux luminaires — a été choisi avec soin pour créer une atmosphère unique, romantique et sophistiquée.",
-  de: "Frisch und vollständig renoviert wurde jedes Element — vom Parkett bis zu den Leuchten — mit Bedacht ausgewählt für eine einzigartige, romantische und stilvolle Atmosphäre."
+  it: "Appena completamente ristrutturato, ogni elemento, dal parquet alle lampade, è stato scelto con attenzione per creare un'atmosfera unica, romantica e sofisticata. È il posto giusto se cerchi qualcosa di diverso dalla solita camera d'albergo.",
+  en: "Freshly and fully renovated, every element, from the parquet to the light fittings, has been chosen with care to create a unique, romantic and sophisticated atmosphere. Your stay in Como will be far more than just another night away.",
+  fr: "Entièrement rénové, chaque élément, du parquet aux luminaires, a été choisi avec soin pour créer une atmosphère unique, romantique et sophistiquée.",
+  de: "Frisch und vollständig renoviert wurde jedes Element, vom Parkett bis zu den Leuchten, mit Bedacht ausgewählt für eine einzigartige, romantische und stilvolle Atmosphäre."
   },
   "home.intro.btn": {
   it: "Tutte le informazioni",
@@ -211,10 +211,10 @@ var T = {
   de: "Eigener Parkplatz"
   },
   "home.why.2p": {
-  it: "Un posto auto privato gratuito incluso nel soggiorno — un lusso raro nel centro di Como.",
-  en: "A free private parking space included with your stay — a rare luxury in central Como.",
+  it: "Un posto auto privato gratuito incluso nel soggiorno, un lusso raro nel centro di Como.",
+  en: "A free private parking space included with your stay, a rare luxury in central Como.",
   fr: "Une place de parking privée et gratuite incluse dans votre séjour.",
-  de: "Ein kostenloser, privater Parkplatz im Aufenthalt enthalten — ein seltener Luxus im Zentrum von Como."
+  de: "Ein kostenloser, privater Parkplatz im Aufenthalt enthalten, ein seltener Luxus im Zentrum von Como."
   },
   "home.why.3t": {
   it: "Design architettonico",
@@ -259,7 +259,7 @@ var T = {
   de: "Italienische Gastfreundschaft"
   },
   "home.why.6p": {
-  it: "Check-in flessibile, risposta rapida e attenzione vera per ogni esigenza.",
+  it: "Rispondiamo ai messaggi in giornata e ti diamo indicazioni su ristoranti, battelli e parcheggi in zona.",
   en: "Flexible check-in, quick responses and genuine care for every need.",
   fr: "Check-in flexible, réponses rapides et attention sincère pour chaque besoin.",
   de: "Flexibler Check-in, schnelle Antworten und echte Aufmerksamkeit für jedes Bedürfnis."
@@ -271,16 +271,16 @@ var T = {
   de: "Lage"
   },
   "home.loc.title": {
-  it: "Nel cuore pulsante di Como",
+  it: "A due passi dal lago",
   en: "In the heart of Como",
   fr: "Au cœur battant de Côme",
   de: "Im pulsierenden Herzen von Como"
   },
   "home.loc.text": {
-  it: "Viale Innocenzo XI, 70 — Como<br>A due passi dalla stazione San Giovanni, dal Duomo e dal lungolago.",
-  en: "Viale Innocenzo XI, 70 — Como<br>Steps from Como San Giovanni station, the Cathedral and the lakefront.",
-  fr: "Viale Innocenzo XI, 70 — Côme<br>À deux pas de la gare San Giovanni, du Dôme et du bord du lac.",
-  de: "Viale Innocenzo XI, 70 — Como<br>Zwei Schritte vom Bahnhof San Giovanni, dem Dom und der Seepromenade."
+  it: "Viale Innocenzo XI 70, Como<br>A due passi dalla stazione San Giovanni, dal Duomo e dal lungolago.",
+  en: "Viale Innocenzo XI 70, Como<br>Steps from Como San Giovanni station, the Cathedral and the lakefront.",
+  fr: "Viale Innocenzo XI 70, Côme<br>À deux pas de la gare San Giovanni, du Dôme et du bord du lac.",
+  de: "Viale Innocenzo XI 70, Como<br>Zwei Schritte vom Bahnhof San Giovanni, dem Dom und der Seepromenade."
   },
   "home.loc.btn": {
   it: "Tutte le info pratiche",
@@ -331,13 +331,13 @@ var T = {
   de: "Privat"
   },
   "info.park.title": {
-  it: "Posto auto privato incluso — gratuito",
-  en: "Private parking included — free",
-  fr: "Place de parking privée incluse — gratuite",
-  de: "Privater Parkplatz inklusive — kostenlos"
+  it: "Posto auto privato incluso, gratuito",
+  en: "Private parking included, free",
+  fr: "Place de parking privée incluse, gratuite",
+  de: "Privater Parkplatz inklusive, kostenlos"
   },
   "info.park.text": {
-  it: "Uno dei vantaggi più preziosi nel centro di Como: disponiamo di un posto auto dedicato e riservato agli ospiti, incluso nel soggiorno senza costi aggiuntivi. Niente stress da parcheggio, niente strisce blu.",
+  it: "Nel centro di Como conta parecchio: disponiamo di un posto auto dedicato e riservato agli ospiti, incluso nel soggiorno senza costi aggiuntivi. Niente stress da parcheggio, niente strisce blu.",
   en: "One of the most valuable perks in central Como: a dedicated, private parking space reserved for guests, included with your stay at no extra cost. No parking stress, no pay-and-display tickets.",
   fr: "L'un des avantages les plus précieux au centre de Côme : une place dédiée et réservée aux hôtes, incluse dans le séjour sans frais supplémentaires. Zéro stress de stationnement.",
   de: "Einer der wertvollsten Vorteile im Zentrum von Como: ein eigener, für Gäste reservierter Parkplatz, ohne Aufpreis im Aufenthalt enthalten. Kein Parkstress, keine Parkgebühren."
@@ -481,7 +481,7 @@ var T = {
   de: "Nichtraucher"
   },
   "info.r3p": {
-  it: "È severamente vietato fumare all'interno dell'appartamento.",
+  it: "Non si fuma dentro l'appartamento. Il balcone è a disposizione.",
   en: "Smoking is strictly prohibited inside the apartment.",
   fr: "Il est strictement interdit de fumer à l'intérieur de l'appartement.",
   de: "Das Rauchen innerhalb der Wohnung ist streng verboten."
@@ -505,7 +505,7 @@ var T = {
   de: "Ruhezeiten"
   },
   "info.r5p": {
-  it: "Si prega di rispettare il silenzio dalle 22:00 alle 08:00.",
+  it: "Silenzio dalle 22:00 alle 08:00, per rispetto dei vicini.",
   en: "Please respect quiet hours from 10:00 PM to 8:00 AM.",
   fr: "Veuillez respecter le silence de 22h00 à 08h00.",
   de: "Bitte respektieren Sie die Ruhezeiten von 22:00 bis 08:00 Uhr."
@@ -529,10 +529,10 @@ var T = {
   de: "So erreichen Sie das Loft"
   },
   "info.how.addr": {
-  it: "<strong>Architect's Loft</strong> — Viale Innocenzo XI, 70 — 22100 Como (CO)",
-  en: "<strong>Architect's Loft</strong> — Viale Innocenzo XI, 70 — 22100 Como (CO)",
-  fr: "<strong>Architect's Loft</strong> — Viale Innocenzo XI, 70 — 22100 Côme (CO)",
-  de: "<strong>Architect's Loft</strong> — Viale Innocenzo XI, 70 — 22100 Como (CO)"
+  it: "<strong>Architect's Loft</strong>, Viale Innocenzo XI 70, 22100 Como (CO)",
+  en: "<strong>Architect's Loft</strong>, Viale Innocenzo XI 70, 22100 Como (CO)",
+  fr: "<strong>Architect's Loft</strong>, Viale Innocenzo XI 70, 22100 Côme (CO)",
+  de: "<strong>Architect's Loft</strong>, Viale Innocenzo XI 70, 22100 Como (CO)"
   },
   "info.d1": {
   it: "🚶 Lago di Como",
@@ -595,7 +595,7 @@ var T = {
   de: "Vollständig renoviert"
   },
   "reno.text": {
-  it: "Il loft è stato appena oggetto di una ristrutturazione completa: nuovi impianti, nuovi arredi, nuove finiture. Tutto il comfort del nuovo, con il carattere unico di un loft architettonico.",
+  it: "Il loft è appena uscito da una ristrutturazione completa: impianti, arredi e finiture sono tutti nuovi.",
   en: "The loft has just undergone a complete renovation: new systems, new furnishings, new finishes. All the comfort of the new, with the unique character of an architectural loft.",
   fr: "Le loft vient de faire l'objet d'une rénovation complète : nouvelles installations, nouveau mobilier, nouvelles finitions.",
   de: "Das Loft wurde gerade vollständig renoviert: neue Installationen, neue Möbel, neue Oberflächen. Aller Komfort des Neuen, mit dem einzigartigen Charakter eines Architekturlofts."
@@ -679,7 +679,7 @@ var T = {
   de: "Schlafzimmer"
   },
   "gal.cam.text": {
-  it: "La camera da letto è ricavata al piano superiore del loft, con accesso dalla scala a chiocciola. Un letto matrimoniale comodo, cuscini soffici e luce naturale per risvegli indimenticabili.",
+  it: "La camera da letto è ricavata al piano superiore del loft, con accesso dalla scala a chiocciola. Un letto matrimoniale comodo, cuscini soffici e luce naturale al mattino.",
   en: "The bedroom is on the upper level of the loft, accessed via the spiral staircase. A comfortable double bed, soft pillows and natural light for unforgettable mornings.",
   fr: "La chambre est aménagée au niveau supérieur du loft, accessible par l'escalier en colimaçon.",
   de: "Das Schlafzimmer befindet sich auf der oberen Ebene des Lofts, erreichbar über die Wendeltreppe."
@@ -799,10 +799,10 @@ var T = {
   de: "Nicht vergessen: Ihr Parkplatz ist inklusive"
   },
   "book.park.text": {
-  it: "Con ogni prenotazione ottieni un posto auto privato e dedicato — gratuito — nel cuore di Como.",
-  en: "Every booking includes a private, dedicated parking space — free of charge — in central Como.",
-  fr: "Chaque réservation comprend une place de parking privée et dédiée — gratuite — au cœur de Côme.",
-  de: "Jede Buchung beinhaltet einen privaten, dedizierten Parkplatz — kostenlos — im Herzen von Como."
+  it: "Con ogni prenotazione ottieni un posto auto privato e dedicato, gratuito, nel cuore di Como.",
+  en: "Every booking includes a private, dedicated parking space, free of charge, in central Como.",
+  fr: "Chaque réservation comprend une place de parking privée et dédiée, gratuite, au cœur de Côme.",
+  de: "Jede Buchung beinhaltet einen privaten, dedizierten Parkplatz, kostenlos, im Herzen von Como."
   },
   "book.why.title": {
   it: "Perché scegliere Architect's Loft",
@@ -829,7 +829,7 @@ var T = {
   de: "Kostenloser Parkplatz"
   },
   "book.why.2p": {
-  it: "Un vero lusso in centro città: riservato, privato e incluso nel tuo soggiorno.",
+  it: "Raro nel centro di Como: riservato, privato e incluso nel prezzo.",
   en: "A true luxury in the city centre: reserved, private and included with your stay.",
   fr: "Un vrai luxe en centre-ville : réservé, privé et inclus dans votre séjour.",
   de: "Ein echter Luxus im Stadtzentrum: reserviert, privat und im Aufenthalt enthalten."
@@ -841,7 +841,7 @@ var T = {
   de: "Architekturloft"
   },
   "book.why.3p": {
-  it: "Doppia altezza, scala a chiocciola, arredi di design. Un'esperienza abitativa unica.",
+  it: "Doppia altezza, scala a chiocciola in acciaio e arredi scelti uno a uno.",
   en: "Double height, spiral staircase, designer furnishings. A truly unique living experience.",
   fr: "Double hauteur, escalier en colimaçon, mobilier design. Une expérience unique.",
   de: "Doppelte Raumhöhe, Wendeltreppe, Designmöbel. Ein einzigartiges Wohnerlebnis."
@@ -877,7 +877,7 @@ var T = {
   de: "Ist der Parkplatz wirklich kostenlos?"
   },
   "book.q2a": {
-  it: "Sì, assolutamente! Ogni prenotazione include un posto auto privato, dedicato e riservato agli ospiti, senza alcun costo aggiuntivo.",
+  it: "Sì. Ogni prenotazione include un posto auto privato, dedicato e riservato agli ospiti, senza alcun costo aggiuntivo.",
   en: "Yes, absolutely! Every booking includes a private parking space dedicated to guests, at no extra cost.",
   fr: "Oui, absolument ! Chaque réservation comprend une place de parking privée, sans frais supplémentaires.",
   de: "Ja, absolut! Jede Buchung beinhaltet einen privaten Parkplatz für Gäste, ohne zusätzliche Kosten."
@@ -925,7 +925,7 @@ var T = {
   de: "Ist die Endreinigung inklusive?"
   },
   "book.q6a": {
-  it: "Sì, la pulizia finale è inclusa nel prezzo del soggiorno. Ti chiediamo solo di lasciare l'appartamento in ordine prima del check-out.",
+  it: "La pulizia finale è inclusa nel prezzo del soggiorno. Ti chiediamo solo di lasciare l'appartamento in ordine prima del check-out.",
   en: "Yes, final cleaning is included in the price. We only ask that you leave the apartment tidy before check-out.",
   fr: "Oui, le nettoyage final est inclus dans le prix du séjour.",
   de: "Ja, die Endreinigung ist im Preis des Aufenthalts inbegriffen."

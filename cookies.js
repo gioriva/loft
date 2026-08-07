@@ -1,4 +1,4 @@
-/* ARCHITECT'S LOFT — Cookie consent + Google Analytics (GA4)
+/* ARCHITECT'S LOFT, Cookie consent + Google Analytics (GA4)
    GDPR: GA4 viene caricato SOLO dopo consenso esplicito.
    Measurement ID: G-K7ZV74C94T */
 
